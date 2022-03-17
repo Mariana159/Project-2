@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial=scale-1.0">
+        <title>Project2</title>
+        <link rel="stylesheet" type="text/css" href="homepage.css">
+
+        <style>
+            .grid-container {
+          display: grid;
+          gap: 5%;
+          padding: 5%;
+        }
+        
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+          padding: 5%;
+          font-size:x-large;
+        }
+        
+        .item1 {
+          grid-column: 1 / span 4;
+          grid-row: 1/ span 2;
+        }
+        
+        .item2 {
+          grid-column: 1/ span 2;
+          grid-row: 4 / span 1;
+        }
+        
+        .item3 {
+          grid-column: 3 / span 2;
+          grid-row: 4;
+        }
+        
+        .item4 {
+          grid-column: 1 / span 4;
+          grid-row: 5/ span 1;
+        }
+        
+        .item5 {
+          grid-column: 1 / span 4;
+          grid-row: 3/span;
+        }
+        </style>
+
+    </head>
+
+    <!--<h1 id="additionvalue" onclick="simpleaddition"> addition value</h1>-->
+
+    
+
+
+    <h1>
+        The Note Game
+    </h1>
+    
+    <body>
+    <div class="grid-container">
+        <div id="D" class="grid-item item1" onclick="changetext()"> Do you like to maintain the peace or stir drama? </div>
+        <div class="grid-item item2"><a href="desks.html">Start the Game</a></div>
+        <div class="grid-item item3"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Actual start Button</a></div>  
+        <div class="grid-item item4" onclick="showmessage()">What will be your ending?</div>
+        <div class="grid-item item5"><a href="Notes/Dnotet.html">Learn what a little bit of noisiness and mischievious can cause</a></div>
+    </body>
+
+    <script>
+
+      console.log(window.document.all);
+
+      function changetext(){
+        //j=document.getElementById.innerHTML("D");
+        //console.log(j);
+        let newValue="Come on Play!"
+        document.getElementById("D").innerHTML=newValue;
+      }
+
+      function showmessage(){
+        console.log("Hellow WOrld");
+        }
+
+      function simpleaddition(){
+        let x=10
+        let y=20
+        let z=x+y
+        document.getElementById("additionvalue").innerHTML=z
+        window.location.href='file//D:Desktop/Art_151/Project2/Project-2.html'
+      }
+        
+    </script>
+
+    </html>

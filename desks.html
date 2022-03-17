@@ -1,0 +1,136 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial=scale-1.0">
+        <title>Secondpage</title>
+        <link rel="stylesheet" type="text/css" href="desks.css">
+    </head>
+    <style>
+
+        .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        height: 100%;
+        align-content: end;
+        column-gap: 10%;
+        row-gap:10%;
+        }
+        .grid-item {
+        background-color: aqua;
+        padding: 15%;
+        font-size: large;
+        text-align: center;
+        }
+
+        .enrique {
+        background-color: rgb(42, 158, 19);
+        }
+
+        .halu {
+        background-color: rgb(255, 0, 0);
+        }
+
+        .abdu{
+            background-color: rgb(0, 255, 98)
+        }
+
+        .brittnay{
+            background-color: aqua;
+        }
+
+        .Hanae{
+            background-color: aqua;
+        }
+
+        .Sage{
+            background-color: rgb(255, 183, 0);
+        }
+
+        .willibald{
+            background-color: aqua;
+        }
+
+        .debbie{
+            background-color: rgb(0, 255, 98);
+        }  
+
+    </style>
+    
+
+    <h1><a href="index.html">My Hitlist</a></h1>
+    <p></p>
+    <!--<button onclick="document.getElementById('id01').style.display='block'">Open Modal</button>-->
+    <body>
+        <div class="grid-container">
+            <div class="grid-item enrique" onclick="document.getElementById('id01').style.display='block'"><a href="profiles/Enrique.html">Enrique</a></div>
+            <div class="grid-item halu" ><a href="profiles/Halu.html">Halu</a></div>
+            <div class="grid-item abdu"><a href="profiles/Abdu.html">Abdu</a></div>  
+            <div class="grid-item brittnay">Brittnay</div>
+            <div class="grid-item player" onclick="practice()">You</div>
+            <div class="grid-item Hanae">Hanae</div>  
+            <div class="grid-item Sage"><a href="profiles/Sage.html">Sage</a></div>
+            <div class="grid-item willibald">Willibald</div>
+            <div class="grid-item debbie"><a href="profiles/Debbie.html">Debbie</a></div>  
+          </div>
+
+
+
+          <!--First Enrique Note-->
+          <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentE" action="/action_page.php">
+              <div class="container">
+                <h1>Note from Enrique to Abdu</h1>
+                <p>Do you want some beef?</p>
+              
+                <div class="clearfix">
+                  <button id="E1A" type="button"  onclick="document.getElementById('id01').style.display='none', practice()"  class="goodbtn">Abdu</button>
+                  <button id="E2H" type="button" onclick="document.getElementById('id01').style.display='none'" class="badbtn">Halu</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+    </body>
+    
+
+    <!--Enrique's Notes-->
+    <script>
+        let E=4
+        let A=3
+        let D=3
+        let H=2
+        let S=2
+
+        let yay= "rgb(42, 158, 19)"
+        let happy= "rgb(136, 255, 0)"
+        let neutral= "rgb(251, 255, 0)"
+        let mad= "rgb(255, 183, 0)"
+        let rage="rgb(255, 77, 0)"
+        function practice(){
+            //console.log(document.querySelector(".grid-item").style);
+            alert("I'm working")
+            document.querySelector(".player").style.background= yay
+        }
+
+        
+
+        // Get the modal
+        let modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+
+        
+
+
+
+       
+    </script>

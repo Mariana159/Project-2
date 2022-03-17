@@ -1,0 +1,152 @@
+
+/* player handwriting */
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+/*Enrique */
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+
+
+
+body{
+    background-color: rgb(88, 212, 171);
+    margin-top: 5%;
+
+    font-family: 'schoolbell', serif;
+    margin-left:  10%;
+    margin-right: 10%;
+    
+    background-image: url("https://wallpaperaccess.com/full/1508837.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+img{
+    margin-bottom: 5%;
+
+}
+
+p{
+    color: rgb(20, 20, 15);
+    text-align: center;
+    margin-left: 10%;
+}
+
+h1{
+    background-color: rgb(99, 218, 218);
+    color: whitesmoke;
+    border-style: ridge;
+    text-align: center;
+    font-size: xx-large;
+}
+
+a{
+    color: black;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.badbtn, .goodbtn {
+  float:right;
+  width: 50%;
+  margin-top: 17%;
+  font-size: medium;
+}
+
+/* Add a color to the cancel button */
+.badbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.goodbtn {
+  background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 2%;
+  text-align: end;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(56, 51, 51, 0.9);
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1% solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: 70%;
+}
+
+
+
+
+.modal-contentE{
+    background-image: url("https://i.pinimg.com/originals/5e/32/ed/5e32ed5425a06a1511ea0a98375c552a.jpg");
+    font-family:'Schoolbell', 'cursive';
+    font-size:x-large;
+}
+
+/* Style the horizontal ruler */
+
+ 
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+/*@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
+}
