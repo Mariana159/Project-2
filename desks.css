@@ -2,9 +2,6 @@
 /* player handwriting */
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
-/*Enrique */
-@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
-
 
 
 
@@ -114,7 +111,26 @@ button:hover {
 
 .modal-contentE{
     background-image: url("https://i.pinimg.com/originals/5e/32/ed/5e32ed5425a06a1511ea0a98375c552a.jpg");
-    font-family:'Schoolbell', 'cursive';
+    font-size:x-large;
+}
+
+.modal-contentA{
+    background-image: url("https://as2.ftcdn.net/v2/jpg/01/16/59/53/1000_F_116595315_9gy1Xh3MImYDiBmwbDXeaV9A9r6wLQvL.jpg");
+    font-size:x-large;
+}
+
+.modal-contentS{
+    background-image: url("https://img.wattpad.com/c99df61869161a7696d8c65c903649cb1f03703b/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f616c71636d6a6779693662374b513d3d2d3535373430343039352e313532326139376436343264313061643236303035323730353631392e6a7067?s=fit&w=720&h=720");
+    font-size:x-large;
+}
+
+.modal-contentH{
+    background-image: url("https://previews.123rf.com/images/srckomkrit/srckomkrit1607/srckomkrit160702201/60232005-hoja-arrugada-de-papel-rayado-o-papel-de-cuaderno.jpg");
+    font-size:x-large;
+}
+
+.modal-contentD{
+    background-image: url("https://cdn.shopify.com/s/files/1/2255/7955/products/Printable_Scrapbook_Paper_lined_2048x.jpg?v=1571536426");
     font-size:x-large;
 }
 

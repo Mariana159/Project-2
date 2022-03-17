@@ -64,62 +64,665 @@
     <!--<button onclick="document.getElementById('id01').style.display='block'">Open Modal</button>-->
     <body>
         <div class="grid-container">
-            <div class="grid-item enrique" onclick="document.getElementById('id01').style.display='block'"><a href="profiles/Enrique.html">Enrique</a></div>
-            <div class="grid-item halu" ><a href="profiles/Halu.html">Halu</a></div>
-            <div class="grid-item abdu"><a href="profiles/Abdu.html">Abdu</a></div>  
+            <div class="grid-item enrique" onclick="showE();"><a href="profiles/Enrique.html">Enrique</a></div>
+            <div class="grid-item halu"  ><a href="profiles/Halu.html">Halu</a></div>
+            <div class="grid-item abdu" onclick="showA();"><a href="profiles/Abdu.html">Abdu</a></div>  
             <div class="grid-item brittnay">Brittnay</div>
             <div class="grid-item player" onclick="practice()">You</div>
             <div class="grid-item Hanae">Hanae</div>  
-            <div class="grid-item Sage"><a href="profiles/Sage.html">Sage</a></div>
+            <div class="grid-item Sage" onclick="showS();" ><a href="profiles/Sage.html">Sage</a></div>
             <div class="grid-item willibald">Willibald</div>
-            <div class="grid-item debbie"><a href="profiles/Debbie.html">Debbie</a></div>  
+            <div class="grid-item debbie" onclick="showD();"><a href="profiles/Debbie.html">Debbie</a></div>  
           </div>
 
 
+    <!--Enrique Notes-->
+        <!--First Enrique Note-->
+        <div id="E1" class="modal">
+        <span onclick="document.getElementById('E1').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content modal-contentE" action="/action_page.php">
+            <div class="container">
+            <h1>Note from Enrique to Abdu</h1>
+            <p>Do you want some beef?</p>
+            
+            <div class="clearfix">
+                <button id="E1A" type="button"  onclick="document.getElementById('E1').style.display='none', document.getElementById('E1AR').style.display='block'" class="goodbtn">Abdu</button>
+                <button id="E2H" type="button" onclick="document.getElementById('E1').style.display='none', document.getElementById('E1HR').style.display='block'" class="badbtn">Halu</button>
+            </div>
+            </div>
+        </form>
+        </div>
 
-          <!--First Enrique Note-->
-          <div id="id01" class="modal">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-            <form class="modal-content modal-contentE" action="/action_page.php">
-              <div class="container">
-                <h1>Note from Enrique to Abdu</h1>
-                <p>Do you want some beef?</p>
-              
+            <!--E1AbduReponse-->
+            <div id="E1AR" class="modal">
+            <span onclick="document.getElementById('E1AR').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentA" action="/action_page.php">
+                <div class="container">
+                <h1>Abdu's Reply</h1>
+                <p>As great as a microwaved beef wellington sounds, I'll have to pass. Also stop leaving food on your notes</p>>
                 <div class="clearfix">
-                  <button id="E1A" type="button"  onclick="document.getElementById('id01').style.display='none', practice()"  class="goodbtn">Abdu</button>
-                  <button id="E2H" type="button" onclick="document.getElementById('id01').style.display='none'" class="badbtn">Halu</button>
+                    <button id="NextE" type="button" onclick="document.getElementById('E1AR').style.display='none', add1(); " class="badbtn">Close</button>
+                    </div>
                 </div>
-              </div>
             </form>
-          </div>
+            </div>
 
+            <!--E1HaluReponse-->
+            <div id="E1HR" class="modal">
+            <span onclick="document.getElementById('E1HR').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentH" action="/action_page.php">
+                <div class="container">
+                <h1>Halu</h1>
+                <p>Ohhohhooho your'e starting beef with me on the wrong day. Meet me outside afterschool</p>>
+                <div class="clearfix">
+                    <button id="NextE" type="button" onclick="document.getElementById('E1HR').style.display='none', add1(); " class="badbtn">Close</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+
+
+        <!--Second Enrique Note-->
+        <div id="E2" class="modal">
+        <span onclick="document.getElementById('E2').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content modal-contentE" action="/action_page.php">
+            <div class="container">
+            <h1>Note from Enrique to Sage</h1>
+            <p>I think I'm gonna have some leftovers after this class. Do you think your pet turtle would want any?</p>
+            
+            <div class="clearfix">
+                <button id="E1A" type="button"  onclick="document.getElementById('E2').style.display='none', document.getElementById('E2SR').style.display='block'" class="goodbtn">Sage</button>
+                <button id="E2H" type="button" onclick="document.getElementById('E2').style.display='none', document.getElementById('E2DR').style.display='block'" class="badbtn">Debbie</button>
+            </div>
+            </div>
+        </form>
+        </div>
+
+            <!--E2SageReponse-->
+            <div id="E2SR" class="modal">
+            <span onclick="document.getElementById('E2SR').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentS" action="/action_page.php">
+                <div class="container">
+                <h1>Sage's Reply</h1>
+                <p>I only ask people to do one thing for me. Not ask about my turle. You made an enemy today Enrique. Watch your back.</p>>
+                <div class="clearfix">
+                    <button id="NextE" type="button" onclick="document.getElementById('E2SR').style.display='none', add1(); " class="badbtn">Close</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+
+            <!--E2DebbieReponse-->
+            <div id="E2DR" class="modal">
+                <span onclick="document.getElementById('E2DR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentD" action="/action_page.php">
+                    <div class="container">
+                    <h1>Debbies's Reply</h1>
+                    <p>Pretty sure turles don't eat beef wellingtons and gansitos lol. Thank you for reminding me about sage's turle tho! I love the lil guy! Follow her turtle @softturtleboi. She posts the cutest pictures of her turle :D</p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('E2DR').style.display='none', add1(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+
+        <!--Third Enrique Note-->
+        <div id="E3" class="modal">
+        <span onclick="document.getElementById('E3').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content modal-contentE" action="/action_page.php">
+            <div class="container">
+            <h1>Note from Enrique to Abdu</h1>
+            <p>My full course meal isn't mixing well in my stomach. I think I'm gonna head home early.</p>
+            
+            <div class="clearfix">
+                <button id="E1A" type="button"  onclick="document.getElementById('E3').style.display='none', document.getElementById('E3AR').style.display='block'" class="goodbtn">Abdu</button>
+                <button id="E2H" type="button" onclick="document.getElementById('E3').style.display='none', document.getElementById('E3HR').style.display='block'" class="badbtn">Halu</button>
+            </div>
+            </div>
+        </form>
+        </div>
+
+            <!--E3AbduReponse-->
+            <div id="E3AR" class="modal">
+                <span onclick="document.getElementById('E3AR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentA" action="/action_page.php">
+                    <div class="container">
+                    <h1>Abdu's Reply</h1>
+                    <p>Alright buddy, don't worry about it. I'll let you know if Mr.Basco talks about anything other then his newborn baby.</p>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('E3AR').style.display='none', add1(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+
+            <!--E3HaluReponse-->
+            <div id="E3HR" class="modal">
+                <span onclick="document.getElementById('E3HR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentH" action="/action_page.php">
+                    <div class="container">
+                    <h1>Halus's Reply</h1>
+                    <p>don't think Ill fall for that. fight me coward</p>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('E3HR').style.display='none', add1(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+
+    <!--Debbiiiieeeeeeeeeeeeee-->
+    <!--Debbie Notes-->
+        <!--First Debbie Note-->
+    <div id="D1" class="modal">
+        <span onclick="document.getElementById('D1').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content modal-contentD" action="/action_page.php">
+            <div class="container">
+            <h1>Note from Debbie to Abdu</h1>
+            <p>I'm really excited to see you at my volleyball game today :)</p>
+            
+            <div class="clearfix">
+                <button id="E1A" type="button"  onclick="document.getElementById('D1').style.display='none', document.getElementById('D1AR').style.display='block'" class="goodbtn">Abdu</button>
+                <button id="E2H" type="button" onclick="document.getElementById('D1').style.display='none', document.getElementById('D1HR').style.display='block'" class="badbtn">Halu</button>
+            </div>
+            </div>
+        </form>
+        </div>
+
+            <!--D1AbduReponse-->
+            <div id="D1AR" class="modal">
+            <span onclick="document.getElementById('D1AR').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentA" action="/action_page.php">
+                <div class="container">
+                <h1>Abdu's Reply</h1>
+                <p>Of course! I wouldn't miss it for the world :D!!!</p>>
+                <div class="clearfix">
+                    <button id="NextE" type="button" onclick="document.getElementById('D1AR').style.display='none', add1D(); " class="badbtn">Close</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+
+            <!--D1HaluReponse-->
+            <div id="D1HR" class="modal">
+            <span onclick="document.getElementById('D1HR').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentH" action="/action_page.php">
+                <div class="container">
+                <h1>Halu's Reply</h1>
+                <p>Oh yeah for sure I'll be there :)</p>>
+                <div class="clearfix">
+                    <button id="NextE" type="button" onclick="document.getElementById('D1HR').style.display='none', add1D(); " class="badbtn">Close</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+
+
+        <!--Second Debbie Note-->
+        <div id="D2" class="modal">
+        <span onclick="document.getElementById('D2').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content modal-contentD" action="/action_page.php">
+            <div class="container">
+            <h1>Debbie to Enrique</h1>
+            <p>I'm a little bored, do you know any good jokes?</p>
+            
+            <div class="clearfix">
+                <button id="E1A" type="button"  onclick="document.getElementById('D2').style.display='none', document.getElementById('D2SR').style.display='block'" class="goodbtn">Sage</button>
+                <button id="E2H" type="button" onclick="document.getElementById('D2').style.display='none', document.getElementById('D2ER').style.display='block'" class="badbtn">Enrique</button>
+            </div>
+            </div>
+        </form>
+        </div>
+
+            <!--D2SageReponse-->
+            <div id="D2SR" class="modal">
+            <span onclick="document.getElementById('D2SR').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentS" action="/action_page.php">
+                <div class="container">
+                <h1>Sage's Reply</h1>
+                <p>You. You're a joke.</p>>
+                <div class="clearfix">
+                    <button id="NextE" type="button" onclick="document.getElementById('D2SR').style.display='none', add1D(); " class="badbtn">Close</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+
+            <!--E2EnriqueReponse-->
+            <div id="D2ER" class="modal">
+                <span onclick="document.getElementById('D2ER').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentE" action="/action_page.php">
+                    <div class="container">
+                    <h1>Enrique's Reply</h1>
+                    <p>What do you call a can opener that doesn't work? A can't opener! lololol</p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('D2ER').style.display='none', add1D(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+
+        <!--Third Debbie Note-->
+        <div id="D3" class="modal">
+        <span onclick="document.getElementById('D3').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content modal-contentD" action="/action_page.php">
+            <div class="container">
+            <h1>Note from Debbie to Abdu</h1>
+            <p>I'm so nervous about my game today. What if I fail infront of everyone :(. What if everyone laughs at me? Do you have any words of comfort?</p>
+            
+            <div class="clearfix">
+                <button id="E1A" type="button"  onclick="document.getElementById('E3').style.display='none', document.getElementById('D3HR').style.display='block'" class="goodbtn">Halu</button>
+                <button id="E2H" type="button" onclick="document.getElementById('E3').style.display='none', document.getElementById('D3AR').style.display='block'" class="badbtn">Abdu</button>
+            </div>
+            </div>
+        </form>
+        </div>
+
+            <!--E3AbduReponse-->
+            <div id="D3AR" class="modal">
+                <span onclick="document.getElementById('D3AR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentA" action="/action_page.php">
+                    <div class="container">
+                    <h1>Abdu's Reply</h1>
+                    <p>Don't worry you'll do great! If you give it you all I'm sure the whole school with still cheer on for you! I believe in you!</p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('D3AR').style.display='none', add1D(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+
+            <!--E3HaluReponse-->
+            <div id="D3HR" class="modal">
+                <span onclick="document.getElementById('D3HR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentH" action="/action_page.php">
+                    <div class="container">
+                    <h1>Halus's Reply</h1>
+                    <p>You might end up doing pretty bad. But don't worry, I'll try my best not to laugh no matter how much everyone else does :)</p>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('D3HR').style.display='none', add1D(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+<!--Ssssssaaaaaaaagggggggggeeeeeeeeessssssss-->
+        <!--First Sage Note-->
+        <div id="S1" class="modal">
+            <span onclick="document.getElementById('S1').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentS" action="/action_page.php">
+                <div class="container">
+                <h1>Note from Sage to Halu</h1>
+                <p>Can you help me with my turtles photoshot today? I want to take some photos of it at the park but I'm afraid it'll run off without someone else helping look for it. It'll be fun :) </p>
+                
+                <div class="clearfix">
+                    <button id="E1A" type="button"  onclick="document.getElementById('S1').style.display='none', document.getElementById('S1AR').style.display='block'" class="goodbtn">Abdu</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('S1').style.display='none', document.getElementById('S1DR').style.display='block'" class="badbtn">Debbie</button>
+                </div>
+                </div>
+            </form>
+            </div>
+    
+                <!--S1AbduReponse-->
+                <div id="S1AR" class="modal">
+                <span onclick="document.getElementById('S1AR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentA" action="/action_page.php">
+                    <div class="container">
+                    <h1>Abdu's Reply</h1>
+                    <p>Sorry, I'll be busy today.</p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('S1AR').style.display='none', add1S(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+                <!--S1DebbieReponse-->
+                <div id="S1DR" class="modal">
+                <span onclick="document.getElementById('S1DR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentD" action="/action_page.php">
+                    <div class="container">
+                    <h1>Debbie's Reply</h1>
+                    <p>I can't today because I have a game. But I would love to help you with that! I am a big fan of you're turtle account! Just tell me another day you're free! I'm so excited!!!!</p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('S1DR').style.display='none', add1S(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+    
+            <!--Second Sage Note-->
+            <div id="S2" class="modal">
+            <span onclick="document.getElementById('S2').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentS" action="/action_page.php">
+                <div class="container">
+                <h1>Note from Sage to Enrique</h1>
+                <p>Dude stop chewing so loudly</p>
+                
+                <div class="clearfix">
+                    <button id="E1A" type="button"  onclick="document.getElementById('S2').style.display='none', document.getElementById('S2HR').style.display='block'" class="goodbtn">Halu</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('S2').style.display='none', document.getElementById('S2ER').style.display='block'" class="badbtn">Enrique</button>
+                </div>
+                </div>
+            </form>
+            </div>
+    
+                <!--S2HaluReponse-->
+                <div id="S2HR" class="modal">
+                <span onclick="document.getElementById('S2HR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentH" action="/action_page.php">
+                    <div class="container">
+                    <h1>Halu's Reply</h1>
+                    <p>I'm not even eatting anything?????</p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('S2HR').style.display='none', add1S(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+                <!--S2EnriqueReponse-->
+                <div id="S2ER" class="modal">
+                    <span onclick="document.getElementById('S2ER').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content modal-contentE" action="/action_page.php">
+                        <div class="container">
+                        <h1>Enriques's Reply</h1>
+                        <p>If the teacher has been able to ignore by chewing for the last two semesters, you can too. </p>>
+                        <div class="clearfix">
+                            <button id="NextE" type="button" onclick="document.getElementById('S2ER').style.display='none', add1S(); " class="badbtn">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+    
+            <!--Third Sage Note-->
+            <div id="S3" class="modal">
+            <span onclick="document.getElementById('S3').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentE" action="/action_page.php">
+                <div class="container">
+                <h1>Note from Sage to Halu </h1>
+                <p>Abdu and Deebie seem to be getting pretty close these days. Do you want to help me keep them apart? </p>
+                
+                <div class="clearfix">
+                    <button id="E1A" type="button"  onclick="document.getElementById('S3').style.display='none', document.getElementById('S3DR').style.display='block'" class="goodbtn">Debbie</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('S3').style.display='none', document.getElementById('S3HR').style.display='block'" class="badbtn">Halu</button>
+                </div>
+                </div>
+            </form>
+            </div>
+    
+                <!--E3DebbieReponse-->
+                <div id="S3DR" class="modal">
+                    <span onclick="document.getElementById('S3DR').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content modal-contentD" action="/action_page.php">
+                        <div class="container">
+                        <h1>Debbie's Reply</h1>
+                        <p>You don't mean that, right? You're just messing around. That's how us friends mess around haha. </p>
+                        <div class="clearfix">
+                            <button id="NextE" type="button" onclick="document.getElementById('S3DR').style.display='none', add1S(); " class="badbtn">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+    
+                <!--E3HaluReponse-->
+                <div id="S3HR" class="modal">
+                    <span onclick="document.getElementById('E3HR').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content modal-contentH" action="/action_page.php">
+                        <div class="container">
+                        <h1>Halus's Reply</h1>
+                        <p>Count me in >:)</p>
+                        <div class="clearfix">
+                            <button id="NextE" type="button" onclick="document.getElementById('S3HR').style.display='none', add1S(); " class="badbtn">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+    <!--Aaaaaaaaabbbbbbbdddduuuuuuu Notes-->
+        <!--First Abdu Note-->
+        <div id="A1" class="modal">
+            <span onclick="document.getElementById('A1').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentA" action="/action_page.php">
+                <div class="container">
+                <h1>Note from Abdu to Halu</h1>
+                <p>Stop trying to come inbetween Debbie and me >:{</p>
+                
+                <div class="clearfix">
+                    <button id="E1A" type="button"  onclick="document.getElementById('A1').style.display='none', document.getElementById('A1ER').style.display='block'" class="goodbtn">Enrique</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('A1').style.display='none', document.getElementById('A1HR').style.display='block'" class="badbtn">Halu</button>
+                </div>
+                </div>
+            </form>
+            </div>
+    
+                <!--A1Enrique'sReponse-->
+                <div id="A1ER" class="modal">
+                <span onclick="document.getElementById('A1ER').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentE" action="/action_page.php">
+                    <div class="container">
+                    <h1>Enrique's Reply</h1>
+                    <p>Bro, I would never do that to you, why would you think that :(. </p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('A1ER').style.display='none', add1A(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+                <!--E1HaluReponse-->
+                <div id="A1HR" class="modal">
+                <span onclick="document.getElementById('A1HR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentA" action="/action_page.php">
+                    <div class="container">
+                    <h1>Halu's Reply</h1>
+                    <p>Why, is it working? </p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('A1HR').style.display='none', add1A(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+    
+            <!--Second Abdu Note-->
+            <div id="A2" class="modal">
+            <span onclick="document.getElementById('A2').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentA" action="/action_page.php">
+                <div class="container">
+                <h1>Note from Abdu to Sage</h1>
+                <p>Hey Sage, you're still helping out the math team with those tarot readings right?</p>
+                
+                <div class="clearfix">
+                    <button id="E1A" type="button"  onclick="document.getElementById('A2').style.display='none', document.getElementById('A2SR').style.display='block'" class="goodbtn">Sage</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('A2').style.display='none', document.getElementById('A2DR').style.display='block'" class="badbtn">Debbie</button>
+                </div>
+                </div>
+            </form>
+            </div>
+    
+                <!--A2SageReponse-->
+                <div id="A2SR" class="modal">
+                <span onclick="document.getElementById('A2SR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentS" action="/action_page.php">
+                    <div class="container">
+                    <h1>Sage's Reply</h1>
+                    <p>For sure! Anything for you :D </p>>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('A2SR').style.display='none', add1A(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+                <!--A2DebbieReponse-->
+                <div id="A2DR" class="modal">
+                    <span onclick="document.getElementById('A2DR').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content modal-contentD" action="/action_page.php">
+                        <div class="container">
+                        <h1>Debbies's Reply</h1>
+                        <p>Sorry, I recived this by accident. I think this note was for Sage from you. </p>>
+                        <div class="clearfix">
+                            <button id="NextE" type="button" onclick="document.getElementById('A2DR').style.display='none', add1A(); " class="badbtn">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+    
+            <!--Third Abdu Note-->
+            <div id="A3" class="modal">
+            <span onclick="document.getElementById('A3').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentE" action="/action_page.php">
+                <div class="container">
+                <h1>Note from Abdu</h1>
+                <p>I was thinking about it the other day, and I definitely think it would be good for you to compete on masterchef. You are the best cook I've ever met and there is no doubt in my mind you would win</p>
+                
+                <div class="clearfix">
+                    <button id="E1A" type="button"  onclick="document.getElementById('A3').style.display='none', document.getElementById('A3DR').style.display='block'" class="goodbtn">Debbie</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('A3').style.display='none', document.getElementById('A3DR').style.display='block'" class="badbtn">Enrique</button>
+                </div>
+                </div>
+            </form>
+            </div>
+    
+                <!--E3AbduReponse-->
+                <div id="A3DR" class="modal">
+                    <span onclick="document.getElementById('A3DR').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content modal-contentA" action="/action_page.php">
+                        <div class="container">
+                        <h1>Debbie's Reply</h1>
+                        <p>Are you making fun of me :(. I told you before I never learned to cook. </p>
+                        <div class="clearfix">
+                            <button id="NextE" type="button" onclick="document.getElementById('A3DR').style.display='none', add1A(); " class="badbtn">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+    
+                <!--E3HaluReponse-->
+                <div id="A3ER" class="modal">
+                    <span onclick="document.getElementById('A3ER').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content modal-contentH" action="/action_page.php">
+                        <div class="container">
+                        <h1>Enrique's Reply</h1>
+                        <p>Thank's man, that really means alot to me :)</p>
+                        <div class="clearfix">
+                            <button id="NextE" type="button" onclick="document.getElementById('A3ER').style.display='none', add1A(); " class="badbtn">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+    
+    
+
+          
 
     </body>
     
-
-    <!--Enrique's Notes-->
     <script>
-        let E=4
-        let A=3
-        let D=3
-        let H=2
-        let S=2
+        var E=4
+        var A=3
+        var D=3
+        var H=2
+        var S=2
 
-        let yay= "rgb(42, 158, 19)"
-        let happy= "rgb(136, 255, 0)"
-        let neutral= "rgb(251, 255, 0)"
-        let mad= "rgb(255, 183, 0)"
-        let rage="rgb(255, 77, 0)"
+        var yay= "rgb(42, 158, 19)"
+        var happy= "rgb(136, 255, 0)"
+        var neutral= "rgb(251, 255, 0)"
+        var mad= "rgb(255, 183, 0)"
+        var rage="rgb(255, 77, 0)"
+
         function practice(){
             //console.log(document.querySelector(".grid-item").style);
             alert("I'm working")
             document.querySelector(".player").style.background= yay
         }
-
         
 
+        //Enrique Switching Notes
+        var ES=0
+        function add1(){
+            ES=ES+1
+        }
+
+        function showE(){
+            if (ES==0){
+            element = document.getElementById("E1").style.display='block'; 
+            }else if (ES==1){
+            element = document.getElementById("E2").style.display='block'; 
+            }else if (ES==2)
+            element = document.getElementById("E3").style.display='block';
+
+        }
+        
+        
+        //Debbie Switching Notes
+        var DS=0
+        function add1D(){
+            DS=DS+1
+        }
+
+        function showD(){
+            if (DS==0){
+            element = document.getElementById("D1").style.display='block'; 
+            }else if (DS==1){
+            element = document.getElementById("D2").style.display='block'; 
+            }else if (DS==2)
+            element = document.getElementById("D3").style.display='block';
+
+        }
+
+        //Sages swithcing notes
+         //Debbie Switching Notes
+         var SS=0
+        function add1S(){
+            SS=SS+1
+        }
+
+        function showS(){
+            if (SS==0){
+            element = document.getElementById("S1").style.display='block'; 
+            }else if (SS==1){
+            element = document.getElementById("S2").style.display='block'; 
+            }else if (SS==2)
+            element = document.getElementById("S3").style.display='block';
+
+        }
+
+       
+         //Debbie Switching Notes
+         var SS=0
+        function add1S(){
+            SS=SS+1
+        }
+
+        function showS(){
+            if (SS==0){
+            element = document.getElementById("S1").style.display='block'; 
+            }else if (SS==1){
+            element = document.getElementById("S2").style.display='block'; 
+            }else if (SS==2)
+            element = document.getElementById("S3").style.display='block';
+
+        }
+
+        //Abdu Switching Notes
+         var AS=0
+        function add1A(){
+            AS=SS+1
+        }
+
+        function showA(){
+            if (AS==0){
+            element = document.getElementById("A1").style.display='block'; 
+            }else if (AS==1){
+            element = document.getElementById("A2").style.display='block'; 
+            }else if (AS==2)
+            element = document.getElementById("A3").style.display='block';
+
+        }
+
+
         // Get the modal
-        let modal = document.getElementById('id01');
+        let modal = document.getElementById('E1');
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {

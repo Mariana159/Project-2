@@ -19,6 +19,22 @@ if (E>=5) {
     document.querySelector(".enrique").style.background= yay
 }
 
+ //Enrique Switching Notes
+ var ES=0
+ function add1(){
+     ES=ES+1
+ }
+
+ function showE(){
+     if (ES==0){
+     element = document.getElementById("E1").style.display='block'; 
+     }else if (ES==1){
+     element = document.getElementById("E2").style.display='block'; 
+     }else if (ES==2)
+     element = document.getElementById("E3").style.display='block';
+
+ }
+
 //Abdu
 
 if (A<=1) {
