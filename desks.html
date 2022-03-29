@@ -7,6 +7,7 @@
         <title>Secondpage</title>
         <link rel="stylesheet" type="text/css" href="desks.css">
     </head>
+
     <style>
 
         .grid-container {
@@ -25,7 +26,7 @@
         }
 
         .enrique {
-        background-color: rgb(42, 158, 19);
+        background-color: rgb(105, 105, 104);
         }
 
         .halu {
@@ -58,14 +59,17 @@
 
     </style>
     
+    
 
     <h1><a href="index.html">My Hitlist</a></h1>
+    <script src="javascript.js"></script>
     <p></p>
     <!--<button onclick="document.getElementById('id01').style.display='block'">Open Modal</button>-->
     <body>
+        
         <div class="grid-container">
             <div class="grid-item enrique" onclick="showE();"><a href="profiles/Enrique.html">Enrique</a></div>
-            <div class="grid-item halu"  ><a href="profiles/Halu.html">Halu</a></div>
+            <div class="grid-item halu" onclick="showH();" ><a href="profiles/Halu.html">Halu</a></div>
             <div class="grid-item abdu" onclick="showA();"><a href="profiles/Abdu.html">Abdu</a></div>  
             <div class="grid-item brittnay">Brittnay</div>
             <div class="grid-item player" onclick="practice()">You</div>
@@ -77,7 +81,7 @@
 
 
     <!--Enrique Notes-->
-        <!--First Enrique Note-->
+        <!--First Enrique Note C-->
         <div id="E1" class="modal">
         <span onclick="document.getElementById('E1').style.display='none'" class="close" title="Close Modal">×</span>
         <form class="modal-content modal-contentE" action="/action_page.php">
@@ -93,7 +97,7 @@
         </form>
         </div>
 
-            <!--E1AbduReponse-->
+            <!--E1AbduReponse C-->
             <div id="E1AR" class="modal">
             <span onclick="document.getElementById('E1AR').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentA" action="/action_page.php">
@@ -101,28 +105,28 @@
                 <h1>Abdu's Reply</h1>
                 <p>As great as a microwaved beef wellington sounds, I'll have to pass. Also stop leaving food on your notes</p>>
                 <div class="clearfix">
-                    <button id="NextE" type="button" onclick="document.getElementById('E1AR').style.display='none', add1(); " class="badbtn">Close</button>
+                    <button id="NextE" type="button" onclick="document.getElementById('E1AR').style.display='none', add1(); EmoES(); EmoColE();" class="badbtn">Close</button>
                     </div>
                 </div>
             </form>
             </div>
 
-            <!--E1HaluReponse-->
+            <!--E1HaluReponse C-->
             <div id="E1HR" class="modal">
             <span onclick="document.getElementById('E1HR').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentH" action="/action_page.php">
                 <div class="container">
                 <h1>Halu</h1>
-                <p>Ohhohhooho your'e starting beef with me on the wrong day. Meet me outside afterschool</p>>
+                <p>Ohhohhooho you're starting beef with me on the wrong day. Meet me outside afterschool</p>>
                 <div class="clearfix">
-                    <button id="NextE" type="button" onclick="document.getElementById('E1HR').style.display='none', add1(); " class="badbtn">Close</button>
+                    <button id="NextE" type="button" onclick="document.getElementById('E1HR').style.display='none', add1(); EmoES(); EmoColE(); EmoHS(); EmoColH(); " class="badbtn">Close</button>
                     </div>
                 </div>
             </form>
             </div>
 
 
-        <!--Second Enrique Note-->
+        <!--Second Enrique Note C-->
         <div id="E2" class="modal">
         <span onclick="document.getElementById('E2').style.display='none'" class="close" title="Close Modal">×</span>
         <form class="modal-content modal-contentE" action="/action_page.php">
@@ -138,21 +142,21 @@
         </form>
         </div>
 
-            <!--E2SageReponse-->
+            <!--E2SageReponse C-->
             <div id="E2SR" class="modal">
             <span onclick="document.getElementById('E2SR').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentS" action="/action_page.php">
                 <div class="container">
                 <h1>Sage's Reply</h1>
-                <p>I only ask people to do one thing for me. Not ask about my turle. You made an enemy today Enrique. Watch your back.</p>>
+                <p>I only ask people to do one thing for me. Not to ask about my turle. You made an enemy today Enrique. Watch your back.</p>>
                 <div class="clearfix">
-                    <button id="NextE" type="button" onclick="document.getElementById('E2SR').style.display='none', add1(); " class="badbtn">Close</button>
+                    <button id="NextE" type="button" onclick="document.getElementById('E2SR').style.display='none', add1(); EmoES(); EmoColE(); EmoSS(); EmoColS();" class="badbtn">Close</button>
                     </div>
                 </div>
             </form>
             </div>
 
-            <!--E2DebbieReponse-->
+            <!--E2DebbieReponse C-->
             <div id="E2DR" class="modal">
                 <span onclick="document.getElementById('E2DR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentD" action="/action_page.php">
@@ -160,19 +164,19 @@
                     <h1>Debbies's Reply</h1>
                     <p>Pretty sure turles don't eat beef wellingtons and gansitos lol. Thank you for reminding me about sage's turle tho! I love the lil guy! Follow her turtle @softturtleboi. She posts the cutest pictures of her turle :D</p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('E2DR').style.display='none', add1(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('E2DR').style.display='none', add1(); EmoEAdd(); EmoColE(); EmoDAdd(); EmoColD();" class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
                 </div>
 
-        <!--Third Enrique Note-->
+        <!--Third Enrique NoteC-->
         <div id="E3" class="modal">
         <span onclick="document.getElementById('E3').style.display='none'" class="close" title="Close Modal">×</span>
         <form class="modal-content modal-contentE" action="/action_page.php">
             <div class="container">
             <h1>Note from Enrique to Abdu</h1>
-            <p>My full course meal isn't mixing well in my stomach. I think I'm gonna head home early.</p>
+            <p>I'm feeling pretty nervous about my audition today :(. I think I'm gonna head home early.</p>
             
             <div class="clearfix">
                 <button id="E1A" type="button"  onclick="document.getElementById('E3').style.display='none', document.getElementById('E3AR').style.display='block'" class="goodbtn">Abdu</button>
@@ -182,21 +186,21 @@
         </form>
         </div>
 
-            <!--E3AbduReponse-->
+            <!--E3AbduReponse C-->
             <div id="E3AR" class="modal">
                 <span onclick="document.getElementById('E3AR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentA" action="/action_page.php">
                     <div class="container">
                     <h1>Abdu's Reply</h1>
-                    <p>Alright buddy, don't worry about it. I'll let you know if Mr.Basco talks about anything other then his newborn baby.</p>
+                    <p>Alright buddy, don't worry about it. I know you'll do great btw! I'll let you know if Mr.Basco talks about anything other then his newborn baby.</p>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('E3AR').style.display='none', add1(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('E3AR').style.display='none', add1(); EmoEAdd(); EmoColE();" class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
                 </div>
 
-            <!--E3HaluReponse-->
+            <!--E3HaluReponseC-->
             <div id="E3HR" class="modal">
                 <span onclick="document.getElementById('E3HR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentH" action="/action_page.php">
@@ -204,7 +208,7 @@
                     <h1>Halus's Reply</h1>
                     <p>don't think Ill fall for that. fight me coward</p>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('E3HR').style.display='none', add1(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('E3HR').style.display='none', add1(); EmoES(); EmoColE(); EmoHS(); EmoColH();" class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
@@ -212,7 +216,7 @@
 
     <!--Debbiiiieeeeeeeeeeeeee-->
     <!--Debbie Notes-->
-        <!--First Debbie Note-->
+        <!--First Debbie NoteC-->
     <div id="D1" class="modal">
         <span onclick="document.getElementById('D1').style.display='none'" class="close" title="Close Modal">×</span>
         <form class="modal-content modal-contentD" action="/action_page.php">
@@ -228,7 +232,7 @@
         </form>
         </div>
 
-            <!--D1AbduReponse-->
+            <!--D1AbduReponseC-->
             <div id="D1AR" class="modal">
             <span onclick="document.getElementById('D1AR').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentA" action="/action_page.php">
@@ -236,21 +240,21 @@
                 <h1>Abdu's Reply</h1>
                 <p>Of course! I wouldn't miss it for the world :D!!!</p>>
                 <div class="clearfix">
-                    <button id="NextE" type="button" onclick="document.getElementById('D1AR').style.display='none', add1D(); " class="badbtn">Close</button>
+                    <button id="NextE" type="button" onclick="document.getElementById('D1AR').style.display='none', add1D(); EmoAAdd(); EmoColA(); EmoDAdd(); EmoColD();" class="badbtn">Close</button>
                     </div>
                 </div>
             </form>
             </div>
 
-            <!--D1HaluReponse-->
+            <!--D1HaluReponseC-->
             <div id="D1HR" class="modal">
             <span onclick="document.getElementById('D1HR').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentH" action="/action_page.php">
                 <div class="container">
                 <h1>Halu's Reply</h1>
-                <p>Oh yeah for sure I'll be there :)</p>>
+                <p>You shouldn't expect me or anyone else to show up. You and your team don't actually play good </p>>
                 <div class="clearfix">
-                    <button id="NextE" type="button" onclick="document.getElementById('D1HR').style.display='none', add1D(); " class="badbtn">Close</button>
+                    <button id="NextE" type="button" onclick="document.getElementById('D1HR').style.display='none', add1D(); EmoDS(); EmoColD(); EmoHS(); EmoColH(); " class="badbtn">Close</button>
                     </div>
                 </div>
             </form>
@@ -273,7 +277,7 @@
         </form>
         </div>
 
-            <!--D2SageReponse-->
+            <!--D2SageReponse C-->
             <div id="D2SR" class="modal">
             <span onclick="document.getElementById('D2SR').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentS" action="/action_page.php">
@@ -281,7 +285,7 @@
                 <h1>Sage's Reply</h1>
                 <p>You. You're a joke.</p>>
                 <div class="clearfix">
-                    <button id="NextE" type="button" onclick="document.getElementById('D2SR').style.display='none', add1D(); " class="badbtn">Close</button>
+                    <button id="NextE" type="button" onclick="document.getElementById('D2SR').style.display='none', add1D(); EmoDS(); EmoColD(); EmoSAdd(); EmoColS();" class="badbtn">Close</button>
                     </div>
                 </div>
             </form>
@@ -295,13 +299,13 @@
                     <h1>Enrique's Reply</h1>
                     <p>What do you call a can opener that doesn't work? A can't opener! lololol</p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('D2ER').style.display='none', add1D(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('D2ER').style.display='none', add1D(); EmoEAdd(); EmoColE(); EmoDAdd(); EmoColD();" class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
                 </div>
 
-        <!--Third Debbie Note-->
+        <!--Third Debbie NoteC-->
         <div id="D3" class="modal">
         <span onclick="document.getElementById('D3').style.display='none'" class="close" title="Close Modal">×</span>
         <form class="modal-content modal-contentD" action="/action_page.php">
@@ -310,14 +314,14 @@
             <p>I'm so nervous about my game today. What if I fail infront of everyone :(. What if everyone laughs at me? Do you have any words of comfort?</p>
             
             <div class="clearfix">
-                <button id="E1A" type="button"  onclick="document.getElementById('E3').style.display='none', document.getElementById('D3HR').style.display='block'" class="goodbtn">Halu</button>
-                <button id="E2H" type="button" onclick="document.getElementById('E3').style.display='none', document.getElementById('D3AR').style.display='block'" class="badbtn">Abdu</button>
+                <button id="E1A" type="button"  onclick="document.getElementById('D3').style.display='none', document.getElementById('D3HR').style.display='block'" class="goodbtn">Halu</button>
+                <button id="E2H" type="button" onclick="document.getElementById('D3').style.display='none', document.getElementById('D3AR').style.display='block'" class="badbtn">Abdu</button>
             </div>
             </div>
         </form>
         </div>
 
-            <!--E3AbduReponse-->
+            <!--E3AbduReponseC-->
             <div id="D3AR" class="modal">
                 <span onclick="document.getElementById('D3AR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentA" action="/action_page.php">
@@ -325,13 +329,13 @@
                     <h1>Abdu's Reply</h1>
                     <p>Don't worry you'll do great! If you give it you all I'm sure the whole school with still cheer on for you! I believe in you!</p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('D3AR').style.display='none', add1D(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('D3AR').style.display='none', add1D(); EmoHAdd(); EmoColH(); EmoDAdd(); EmoColD(); "class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
                 </div>
 
-            <!--E3HaluReponse-->
+            <!--E3HaluReponseC-->
             <div id="D3HR" class="modal">
                 <span onclick="document.getElementById('D3HR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentH" action="/action_page.php">
@@ -339,7 +343,7 @@
                     <h1>Halus's Reply</h1>
                     <p>You might end up doing pretty bad. But don't worry, I'll try my best not to laugh no matter how much everyone else does :)</p>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('D3HR').style.display='none', add1D(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('D3HR').style.display='none', add1D(); EmoHAdd(); EmoColH(); EmoDS(); EmoColD();"class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
@@ -350,7 +354,7 @@
             <span onclick="document.getElementById('S1').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentS" action="/action_page.php">
                 <div class="container">
-                <h1>Note from Sage to Halu</h1>
+                <h1>Note from Sage to Abdu</h1>
                 <p>Can you help me with my turtles photoshot today? I want to take some photos of it at the park but I'm afraid it'll run off without someone else helping look for it. It'll be fun :) </p>
                 
                 <div class="clearfix">
@@ -361,7 +365,7 @@
             </form>
             </div>
     
-                <!--S1AbduReponse-->
+                <!--S1AbduReponseC-->
                 <div id="S1AR" class="modal">
                 <span onclick="document.getElementById('S1AR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentA" action="/action_page.php">
@@ -369,13 +373,13 @@
                     <h1>Abdu's Reply</h1>
                     <p>Sorry, I'll be busy today.</p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('S1AR').style.display='none', add1S(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('S1AR').style.display='none', add1S(); EmoSS(); EmoColS();" class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
                 </div>
     
-                <!--S1DebbieReponse-->
+                <!--S1DebbieReponseC-->
                 <div id="S1DR" class="modal">
                 <span onclick="document.getElementById('S1DR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentD" action="/action_page.php">
@@ -383,30 +387,30 @@
                     <h1>Debbie's Reply</h1>
                     <p>I can't today because I have a game. But I would love to help you with that! I am a big fan of you're turtle account! Just tell me another day you're free! I'm so excited!!!!</p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('S1DR').style.display='none', add1S(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('S1DR').style.display='none', add1S(); EmoSS(); EmoColS(); EmoDAdd(); EmoColD(); " class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
                 </div>
     
     
-            <!--Second Sage Note-->
-            <div id="S2" class="modal">
-            <span onclick="document.getElementById('S2').style.display='none'" class="close" title="Close Modal">×</span>
+            <!--Third Sage Note-->
+            <div id="S3" class="modal">
+            <span onclick="document.getElementById('S3').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentS" action="/action_page.php">
                 <div class="container">
                 <h1>Note from Sage to Enrique</h1>
                 <p>Dude stop chewing so loudly</p>
                 
                 <div class="clearfix">
-                    <button id="E1A" type="button"  onclick="document.getElementById('S2').style.display='none', document.getElementById('S2HR').style.display='block'" class="goodbtn">Halu</button>
-                    <button id="E2H" type="button" onclick="document.getElementById('S2').style.display='none', document.getElementById('S2ER').style.display='block'" class="badbtn">Enrique</button>
+                    <button id="E1A" type="button"  onclick="document.getElementById('S3').style.display='none', document.getElementById('S2HR').style.display='block'" class="goodbtn">Halu</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('S3').style.display='none', document.getElementById('S2ER').style.display='block'" class="badbtn">Enrique</button>
                 </div>
                 </div>
             </form>
             </div>
     
-                <!--S2HaluReponse-->
+                <!--S3HaluReponse-->
                 <div id="S2HR" class="modal">
                 <span onclick="document.getElementById('S2HR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentH" action="/action_page.php">
@@ -414,43 +418,43 @@
                     <h1>Halu's Reply</h1>
                     <p>I'm not even eatting anything?????</p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('S2HR').style.display='none', add1S(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('S2HR').style.display='none', add1S(); EmoHS(); EmoColH(); " class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
                 </div>
     
-                <!--S2EnriqueReponse-->
+                <!--S3EnriqueReponse-->
                 <div id="S2ER" class="modal">
                     <span onclick="document.getElementById('S2ER').style.display='none'" class="close" title="Close Modal">×</span>
                     <form class="modal-content modal-contentE" action="/action_page.php">
                         <div class="container">
                         <h1>Enriques's Reply</h1>
-                        <p>If the teacher has been able to ignore by chewing for the last two semesters, you can too. </p>>
+                        <p>If the teacher has been able to ignore my chewing for the last two semesters, you can too. </p>>
                         <div class="clearfix">
-                            <button id="NextE" type="button" onclick="document.getElementById('S2ER').style.display='none', add1S(); " class="badbtn">Close</button>
+                            <button id="NextE" type="button" onclick="document.getElementById('S2ER').style.display='none', add1S(); EmoSS(); EmoColS();" class="badbtn">Close</button>
                             </div>
                         </div>
                     </form>
                     </div>
     
-            <!--Third Sage Note-->
-            <div id="S3" class="modal">
+            <!--Third Sage NoteC-->
+            <div id="S2" class="modal">
             <span onclick="document.getElementById('S3').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentE" action="/action_page.php">
                 <div class="container">
                 <h1>Note from Sage to Halu </h1>
-                <p>Abdu and Deebie seem to be getting pretty close these days. Do you want to help me keep them apart? </p>
+                <p>Abdu and Debbie have been pretty annoying these days. Do you want to help me ruin their day? </p>
                 
                 <div class="clearfix">
-                    <button id="E1A" type="button"  onclick="document.getElementById('S3').style.display='none', document.getElementById('S3DR').style.display='block'" class="goodbtn">Debbie</button>
-                    <button id="E2H" type="button" onclick="document.getElementById('S3').style.display='none', document.getElementById('S3HR').style.display='block'" class="badbtn">Halu</button>
+                    <button id="E1A" type="button"  onclick="document.getElementById('S2').style.display='none', document.getElementById('S3DR').style.display='block'" class="goodbtn">Debbie</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('S2').style.display='none', document.getElementById('S3HR').style.display='block'" class="badbtn">Halu</button>
                 </div>
                 </div>
             </form>
             </div>
     
-                <!--E3DebbieReponse-->
+                <!--E3DebbieReponseC-->
                 <div id="S3DR" class="modal">
                     <span onclick="document.getElementById('S3DR').style.display='none'" class="close" title="Close Modal">×</span>
                     <form class="modal-content modal-contentD" action="/action_page.php">
@@ -458,13 +462,13 @@
                         <h1>Debbie's Reply</h1>
                         <p>You don't mean that, right? You're just messing around. That's how us friends mess around haha. </p>
                         <div class="clearfix">
-                            <button id="NextE" type="button" onclick="document.getElementById('S3DR').style.display='none', add1S(); " class="badbtn">Close</button>
+                            <button id="NextE" type="button" onclick="document.getElementById('S3DR').style.display='none', add1S();EmoDS(); EmoColD(); EmoColH(); EmoSAdd(); EmoColS()" class="badbtn">Close</button>
                             </div>
                         </div>
                     </form>
                     </div>
     
-                <!--E3HaluReponse-->
+                <!--E3HaluReponseC-->
                 <div id="S3HR" class="modal">
                     <span onclick="document.getElementById('E3HR').style.display='none'" class="close" title="Close Modal">×</span>
                     <form class="modal-content modal-contentH" action="/action_page.php">
@@ -472,23 +476,23 @@
                         <h1>Halus's Reply</h1>
                         <p>Count me in >:)</p>
                         <div class="clearfix">
-                            <button id="NextE" type="button" onclick="document.getElementById('S3HR').style.display='none', add1S(); " class="badbtn">Close</button>
+                            <button id="NextE" type="button" onclick="document.getElementById('S3HR').style.display='none', add1S();EmoHAdd(); EmoColH(); EmoSAdd(); EmoColS();" class="badbtn">Close</button>
                             </div>
                         </div>
                     </form>
                     </div>
     <!--Aaaaaaaaabbbbbbbdddduuuuuuu Notes-->
         <!--First Abdu Note-->
-        <div id="A1" class="modal">
-            <span onclick="document.getElementById('A1').style.display='none'" class="close" title="Close Modal">×</span>
+        <div id="A3" class="modal">
+            <span onclick="document.getElementById('A3').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentA" action="/action_page.php">
                 <div class="container">
                 <h1>Note from Abdu to Halu</h1>
-                <p>Stop trying to come inbetween Debbie and me >:{</p>
+                <p> Why have you been mean to everyone all day? Not cool man. </p>
                 
                 <div class="clearfix">
-                    <button id="E1A" type="button"  onclick="document.getElementById('A1').style.display='none', document.getElementById('A1ER').style.display='block'" class="goodbtn">Enrique</button>
-                    <button id="E2H" type="button" onclick="document.getElementById('A1').style.display='none', document.getElementById('A1HR').style.display='block'" class="badbtn">Halu</button>
+                    <button id="E1A" type="button"  onclick="document.getElementById('A3').style.display='none', document.getElementById('A1ER').style.display='block'" class="goodbtn">Enrique</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('A3').style.display='none', document.getElementById('A1HR').style.display='block'" class="badbtn">Halu</button>
                 </div>
                 </div>
             </form>
@@ -500,23 +504,23 @@
                 <form class="modal-content modal-contentE" action="/action_page.php">
                     <div class="container">
                     <h1>Enrique's Reply</h1>
-                    <p>Bro, I would never do that to you, why would you think that :(. </p>>
+                    <p>Bro, I would never do that, why would you think that of me :(. </p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('A1ER').style.display='none', add1A(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('A1ER').style.display='none', add1A(); EmoES(); EmoColE(); EmoAS(); EmoColA();" class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
                 </div>
     
-                <!--E1HaluReponse-->
+                <!--A1HaluReponse-->
                 <div id="A1HR" class="modal">
                 <span onclick="document.getElementById('A1HR').style.display='none'" class="close" title="Close Modal">×</span>
                 <form class="modal-content modal-contentA" action="/action_page.php">
                     <div class="container">
                     <h1>Halu's Reply</h1>
-                    <p>Why, is it working? </p>>
+                    <p>I warned you all not to talk to me</p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('A1HR').style.display='none', add1A(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('A1HR').style.display='none', add1A(); EmoHAdd(); EmoColH();" class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
@@ -528,8 +532,8 @@
             <span onclick="document.getElementById('A2').style.display='none'" class="close" title="Close Modal">×</span>
             <form class="modal-content modal-contentA" action="/action_page.php">
                 <div class="container">
-                <h1>Note from Abdu to Sage</h1>
-                <p>Hey Sage, you're still helping out the math team with those tarot readings right?</p>
+                <h1>Note from Abdu to Debbie</h1>
+                <p>Hey, good luck today :). Also can't wait to spend time with you at the tarot readings this week.  </p>
                 
                 <div class="clearfix">
                     <button id="E1A" type="button"  onclick="document.getElementById('A2').style.display='none', document.getElementById('A2SR').style.display='block'" class="goodbtn">Sage</button>
@@ -545,9 +549,9 @@
                 <form class="modal-content modal-contentS" action="/action_page.php">
                     <div class="container">
                     <h1>Sage's Reply</h1>
-                    <p>For sure! Anything for you :D </p>>
+                    <p>I'll be there for sure :) </p>>
                     <div class="clearfix">
-                        <button id="NextE" type="button" onclick="document.getElementById('A2SR').style.display='none', add1A(); " class="badbtn">Close</button>
+                        <button id="NextE" type="button" onclick="document.getElementById('A2SR').style.display='none', add1A(); EmoSAdd(); EmoColS(); EmoAS(); EmoColA();" class="badbtn">Close</button>
                         </div>
                     </div>
                 </form>
@@ -559,37 +563,37 @@
                     <form class="modal-content modal-contentD" action="/action_page.php">
                         <div class="container">
                         <h1>Debbies's Reply</h1>
-                        <p>Sorry, I recived this by accident. I think this note was for Sage from you. </p>>
+                        <p>Absolutely! I can't wait either :) </p>
                         <div class="clearfix">
-                            <button id="NextE" type="button" onclick="document.getElementById('A2DR').style.display='none', add1A(); " class="badbtn">Close</button>
+                            <button id="NextE" type="button" onclick="document.getElementById('A2DR').style.display='none', add1A(); EmoDAdd(); EmoColD(); EmoAAdd(); EmoColA(); " class="badbtn">Close</button>
                             </div>
                         </div>
                     </form>
                     </div>
     
-            <!--Third Abdu Note-->
-            <div id="A3" class="modal">
-            <span onclick="document.getElementById('A3').style.display='none'" class="close" title="Close Modal">×</span>
-            <form class="modal-content modal-contentE" action="/action_page.php">
+            <!--Third Abdu NoteC-->
+            <div id="A1" class="modal">
+            <span onclick="document.getElementById('A1').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentA" action="/action_page.php">
                 <div class="container">
                 <h1>Note from Abdu</h1>
                 <p>I was thinking about it the other day, and I definitely think it would be good for you to compete on masterchef. You are the best cook I've ever met and there is no doubt in my mind you would win</p>
                 
                 <div class="clearfix">
-                    <button id="E1A" type="button"  onclick="document.getElementById('A3').style.display='none', document.getElementById('A3DR').style.display='block'" class="goodbtn">Debbie</button>
-                    <button id="E2H" type="button" onclick="document.getElementById('A3').style.display='none', document.getElementById('A3DR').style.display='block'" class="badbtn">Enrique</button>
+                    <button id="E1A" type="button"  onclick="document.getElementById('A1').style.display='none', document.getElementById('A3DR').style.display='block'" class="goodbtn">Debbie</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('A1').style.display='none', document.getElementById('A3ER').style.display='block'" class="badbtn">Enrique</button>
                 </div>
                 </div>
             </form>
             </div>
     
-                <!--E3AbduReponse-->
+                <!--A3DebbieReponseC-->
                 <div id="A3DR" class="modal">
                     <span onclick="document.getElementById('A3DR').style.display='none'" class="close" title="Close Modal">×</span>
                     <form class="modal-content modal-contentA" action="/action_page.php">
                         <div class="container">
                         <h1>Debbie's Reply</h1>
-                        <p>Are you making fun of me :(. I told you before I never learned to cook. </p>
+                        <p>I never said I wanted to be on the show lol </p>
                         <div class="clearfix">
                             <button id="NextE" type="button" onclick="document.getElementById('A3DR').style.display='none', add1A(); " class="badbtn">Close</button>
                             </div>
@@ -597,143 +601,370 @@
                     </form>
                     </div>
     
-                <!--E3HaluReponse-->
+                <!--A3EnriquReponseC-->
                 <div id="A3ER" class="modal">
                     <span onclick="document.getElementById('A3ER').style.display='none'" class="close" title="Close Modal">×</span>
-                    <form class="modal-content modal-contentH" action="/action_page.php">
+                    <form class="modal-content modal-contentE" action="/action_page.php">
                         <div class="container">
                         <h1>Enrique's Reply</h1>
                         <p>Thank's man, that really means alot to me :)</p>
                         <div class="clearfix">
-                            <button id="NextE" type="button" onclick="document.getElementById('A3ER').style.display='none', add1A(); " class="badbtn">Close</button>
+                            <button id="NextE" type="button" onclick="document.getElementById('A3ER').style.display='none', add1A();EmoEAdd(); EmoColE();" class="badbtn">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+        
+      <!--Haaaaalllluuuuuuuuu Notes-->
+        <!--First Halu Note-->
+        <div id="H1" class="modal">
+            <span onclick="document.getElementById('H1').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentH" action="/action_page.php">
+                <div class="container">
+                <h1>Note from Halu to Enrique</h1>
+                <p>Hey, you're being real annoying right now. Stop what you're doing or you're going to catch these hands</p>
+                
+                <div class="clearfix">
+                    <button id="E1A" type="button"  onclick="document.getElementById('H1').style.display='none', document.getElementById('H1ER').style.display='block'" class="goodbtn">Enrique</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('H1').style.display='none', document.getElementById('H1SR').style.display='block'" class="badbtn">Sage</button>
+                </div>
+                </div>
+            </form>
+            </div>
+    
+                <!--A1Enrique'sReponse-->
+                <div id="H1ER" class="modal">
+                <span onclick="document.getElementById('H1ER').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentE" action="/action_page.php">
+                    <div class="container">
+                    <h1>Enrique's Reply</h1>
+                    <p>Aww come on :(. I don't want to fight you man. I'll wrap up early today T-T.</p>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('H1ER').style.display='none', add1H(); EmoES(); EmoColE(); " class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+                <!--H1Sage'sReponse-->
+                <div id="H1SR" class="modal">
+                <span onclick="document.getElementById('H1SR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentS" action="/action_page.php">
+                    <div class="container">
+                    <h1>Sage's Reply</h1>
+                    <p>Don't try to start a fight with me. I have month's worth of pent of anger. I would end you. </p>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('H1SR').style.display='none', add1H(); EmoDS(); EmoColD; EmoDS();" class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+    
+            <!--Second Halu Note-->
+            <div id="H2" class="modal">
+            <span onclick="document.getElementById('H2').style.display='none'" class="close" title="Close Modal">×</span>
+            <form class="modal-content modal-contentH" action="/action_page.php">
+                <div class="container">
+                <h1>Note from Halu to Sage</h1>
+                <p>You know what bothers me? No one has tried to ask me why I'm upset. You want to kmow why? My younger sister took my rock collection outside to play and now I can't tell which rocks are from my collection and which were already in the yard.</p>
+                
+                <div class="clearfix">
+                    <button id="E1A" type="button"  onclick="document.getElementById('H2').style.display='none', document.getElementById('H2SR').style.display='block'" class="goodbtn">Sage</button>
+                    <button id="E2H" type="button" onclick="document.getElementById('H2').style.display='none', document.getElementById('H2AR').style.display='block'" class="badbtn">Abdu</button>
+                </div>
+                </div>
+            </form>
+            </div>
+    
+                <!--H2SageReponse-->
+                <div id="H2SR" class="modal">
+                <span onclick="document.getElementById('H2SR').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content modal-contentS" action="/action_page.php">
+                    <div class="container">
+                    <h1>Sage's Reply</h1>
+                    <p>The only solution here is to sue your sister for destruction of property and emotional damage.</p>
+                    <div class="clearfix">
+                        <button id="NextE" type="button" onclick="document.getElementById('H2SR').style.display='none', add1H(); EmoSAdd(); EmoColS(); EmoHAdd(); EmoColH();" class="badbtn">Close</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+    
+                <!--H2AbduReponse-->
+                <div id="H2AR" class="modal">
+                    <span onclick="document.getElementById('H2AR').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content modal-contentA" action="/action_page.php">
+                        <div class="container">
+                        <h1>Abdu's Reply</h1>
+                        <p>I'm not saying it's karma but.....</p>>
+                        <div class="clearfix">
+                            <button id="NextE" type="button" onclick="document.getElementById('H2AR').style.display='none', add1H();EmoAAdd(); EmoColA();EmoSS(); EmoColS();" class="badbtn">Close</button>
                             </div>
                         </div>
                     </form>
                     </div>
     
+        
     
+<!--Ending Popuppppppppppppppp-->
+<!--Halu&Enrique-->
+<div id="HE" class="modal">
+    <form class="modal-content modal-contentF" action="/action_page.php">
+        <div class="container">
+        <h1>Ending Unlocked</h1>
+        <p>Either there are no more notes to pass around or you effected someone emotionally enough to recieve unlock an ending </p>
+        <div class="clearfix">
+            <button type="button" onclick="document.getElementById('HE').style.display='none'" class="badbtn"><a href="Endings/Halu&Enriquefight.html"> Ending </a></button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+<!--Abdu&Debbie-->
+    <div id="AD" class="modal">
+        <form class="modal-content modal-contentF" action="/action_page.php">
+            <div class="container">
+            <h1>Ending Unlocked</h1>
+            <p>Either there are no more notes to pass around or you effected someone emotionally enough to recieve unlock an ending </p>
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('AD').style.display='none'" class="badbtn"><a href="Endings/Abdu&Debbie.html"> Ending </a></button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<!--Debbie Leaves-->
+     <div id="Deb" class="modal">
+        <form class="modal-content modal-contentF" action="/action_page.php">
+            <div class="container">
+            <h1>Ending Unlocked</h1>
+            <p>Either there are no more notes to pass around or you effected someone emotionally enough to recieve unlock an ending </p>
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('Deb').style.display='none'" class="badbtn"><a href="Endings/DebbieLeaves.html"> Ending </a></button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<!--Master Chef Enrique-->
+<div id="ME" class="modal">
+    <form class="modal-content modal-contentF" action="/action_page.php">
+        <div class="container">
+        <h1>Ending Unlocked</h1>
+        <p>Either there are no more notes to pass around or you effected someone emotionally enough to recieve unlock an ending </p>
+        <div class="clearfix">
+            <button type="button" onclick="document.getElementById('ME').style.display='none'" class="badbtn"><a href="Endings/MasterEnr.html"> Ending </a></button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+<!--Master Chef Enrique-->
+<div id="NH" class="modal">
+    <form class="modal-content modal-contentF" action="/action_page.php">
+        <div class="container">
+        <h1>Ending Unlocked</h1>
+        <p>Either there are no more notes to pass around or you effected someone emotionally enough to recieve unlock an ending </p>
+        <div class="clearfix">
+            <button type="button" onclick="document.getElementById('NH').style.display='none'" class="badbtn"><a href="Endings/Nothing.html"> Ending </a></button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+<!--Sage lonely ending-->
+<div id="LD" class="modal">
+    <form class="modal-content modal-contentF" action="/action_page.php">
+        <div class="container">
+        <h1>Ending Unlocked</h1>
+        <p>Either there are no more notes to pass around or you effected someone emotionally enough to recieve unlock an ending </p>
+        <div class="clearfix">
+            <button type="button" onclick="document.getElementById('LD').style.display='none'" class="badbtn"><a href="Endings/Sage.html"> Ending </a></button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    
+
 
           
 
-    </body>
+</body>
+<script>
+//color changing
+
+var A=3
+var D=3
+var H=2
+var S=2
+
+var HaluandE = document.getElementById("HE");
+var AbduandD = document.getElementById("AD");
+var DebbieLeaves = document.getElementById("Deb");
+var MasterE = document.getElementById("ME");
+var lonelysage= document.getElementById("LD");
+var nothingHappens= document.getElementById("NH");
+
+var yay= "rgb(42, 158, 19)"
+var happy="rgb(136, 255, 0)"
+var neutral= "rgb(251, 255, 0)"
+var mad= "rgb(255, 183, 0)"
+var rage="rgb(255, 77, 0)"
+
+//Enrique emotion chart
+
+var EE=4
+var x=2
+
+function EmoES(){
+    EE=EE-1;
+}
+ 
+function EmoEAdd(){
+    EE=EE+1;
+}
+
+
+EmoColE();
+function EmoColE(){
     
-    <script>
-        var E=4
-        var A=3
-        var D=3
-        var H=2
-        var S=2
-
-        var yay= "rgb(42, 158, 19)"
-        var happy= "rgb(136, 255, 0)"
-        var neutral= "rgb(251, 255, 0)"
-        var mad= "rgb(255, 183, 0)"
-        var rage="rgb(255, 77, 0)"
-
-        function practice(){
-            //console.log(document.querySelector(".grid-item").style);
-            alert("I'm working")
-            document.querySelector(".player").style.background= yay
-        }
-        
-
-        //Enrique Switching Notes
-        var ES=0
-        function add1(){
-            ES=ES+1
-        }
-
-        function showE(){
-            if (ES==0){
-            element = document.getElementById("E1").style.display='block'; 
-            }else if (ES==1){
-            element = document.getElementById("E2").style.display='block'; 
-            }else if (ES==2)
-            element = document.getElementById("E3").style.display='block';
-
-        }
-        
-        
-        //Debbie Switching Notes
-        var DS=0
-        function add1D(){
-            DS=DS+1
-        }
-
-        function showD(){
-            if (DS==0){
-            element = document.getElementById("D1").style.display='block'; 
-            }else if (DS==1){
-            element = document.getElementById("D2").style.display='block'; 
-            }else if (DS==2)
-            element = document.getElementById("D3").style.display='block';
-
-        }
-
-        //Sages swithcing notes
-         //Debbie Switching Notes
-         var SS=0
-        function add1S(){
-            SS=SS+1
-        }
-
-        function showS(){
-            if (SS==0){
-            element = document.getElementById("S1").style.display='block'; 
-            }else if (SS==1){
-            element = document.getElementById("S2").style.display='block'; 
-            }else if (SS==2)
-            element = document.getElementById("S3").style.display='block';
-
-        }
-
-       
-         //Debbie Switching Notes
-         var SS=0
-        function add1S(){
-            SS=SS+1
-        }
-
-        function showS(){
-            if (SS==0){
-            element = document.getElementById("S1").style.display='block'; 
-            }else if (SS==1){
-            element = document.getElementById("S2").style.display='block'; 
-            }else if (SS==2)
-            element = document.getElementById("S3").style.display='block';
-
-        }
-
-        //Abdu Switching Notes
-         var AS=0
-        function add1A(){
-            AS=SS+1
-        }
-
-        function showA(){
-            if (AS==0){
-            element = document.getElementById("A1").style.display='block'; 
-            }else if (AS==1){
-            element = document.getElementById("A2").style.display='block'; 
-            }else if (AS==2)
-            element = document.getElementById("A3").style.display='block';
-
-        }
+    if (EE==0) {
+        HaluandE.style.display = "block";
+    }else if (EE==2) {
+       document.querySelector(".enrique").style.background=rage
+    }else if (EE==3) {
+        document.querySelector(".enrique").style.background=neutral
+    }else if (EE==4) {
+       document.querySelector(".enrique").style.background=happy
+    }else if (EE==5) {
+        document.querySelector(".enrique").style.background=yay
+    }else if (EE=6) {
+        document.querySelector(".enrique").style.background=yay
+        MasterE.style.display = "block";
+    }
+}
 
 
-        // Get the modal
-        let modal = document.getElementById('E1');
+//Abdu emo
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-        }
+function EmoAAdd(){
+    A=A+1
+}
 
-        
+function EmoAS(){
+    A=A-1
+}
+
+EmoColA();
+function EmoColA(){
+    if (A<=1) {
+        document.querySelector(".abdu").style.background= rage
+        HaluandE.style.display = "block";
+    }else if (A==2) {
+        document.querySelector(".abdu").style.background= mad
+    }else if (A==3) {
+        document.querySelector(".abdu").style.background= neutral
+    }else if (A==4) {
+        document.querySelector(".abdu").style.background= happy
+    }else if (A>=5) {
+        document.querySelector(".abdu").style.background= yay
+        var AbduandD = document.getElementById("AD");
+    }
+}
+
+//Debbie emo
+function EmoDAdd(){
+    D=D+1
+}
+
+function EmoDS(){
+    D=D-1
+}
+
+EmoColD();
+function EmoColD(){
+    
+    if (D==0) {
+        document.querySelector(".debbie").style.background= rage
+        DebbieLeaves.style.display = "block";
+    }else if (D==1) {
+        document.querySelector(".debbie").style.background= rage
+    }else if (D==2) {
+        document.querySelector(".debbie").style.background= mad
+    }else if (D==3) {
+        document.querySelector(".debbie").style.background= neutral
+    }else if (D==4) {
+        document.querySelector(".debbie").style.background= happy
+    }else if (D==5) {
+        document.querySelector(".debbie").style.background= yay
+    }else if (D==6) {
+        document.querySelector(".debbie").style.background= yay
+        AbduandD.style.display = "block";
+    }
+}
 
 
 
-       
-    </script>
+
+
+//Halu emo
+function EmoHAdd(){
+    H=H+1
+}
+
+function EmoHS(){
+    H=H-1
+}
+
+EmoColH();
+function EmoColH(){
+
+    if (H==0) {
+        document.querySelector(".halu").style.background= rage
+        HaluandE.style.display = "block";
+    }else if (H==1) {
+        document.querySelector(".halu").style.background= rage
+    }else if (H==2) {
+        document.querySelector(".halu").style.background= mad
+    }else if (H==3) {
+        document.querySelector(".halu").style.background= neutral
+    }else if (H==4) {
+        document.querySelector(".halu").style.background= happy
+    }else if (H>=5) {
+        document.querySelector(".halu").style.background= yay
+    }
+}
+
+
+
+//Sage emo
+function EmoSAdd(){
+    S=S+1
+}
+
+function EmoSS(){
+    S=S-1
+}
+
+EmoColS();
+function EmoColS(){
+    if (S==0) {
+        document.querySelector(".sage").style.background= rage
+        lonelysage.style.display = "block";
+    }else if (S==1) {
+        document.querySelector(".sage").style.background= rage
+    }else if (S==2) {
+        document.querySelector(".sage").style.background= mad
+    }else if (S==3) {
+        document.querySelector(".sage").style.background= neutral
+    }else if (S==4) {
+        document.querySelector(".sage").style.background= happy
+    }else if (S>=5) {
+        document.querySelector(".sage").style.background= yay
+    }
+}
+
+
+</script>

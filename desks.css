@@ -114,6 +114,11 @@ button:hover {
     font-size:x-large;
 }
 
+.modal-contentF{
+  background-color: #f1f1f1;
+  font-size:x-large;
+}
+
 .modal-contentA{
     background-image: url("https://as2.ftcdn.net/v2/jpg/01/16/59/53/1000_F_116595315_9gy1Xh3MImYDiBmwbDXeaV9A9r6wLQvL.jpg");
     font-size:x-large;
